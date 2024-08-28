@@ -1,0 +1,68 @@
+:root {
+  --ion-color-primary: #C30C0B;
+	--ion-color-primary-rgb: 195,12,11;
+	--ion-color-primary-contrast: #ffffff;
+	--ion-color-primary-contrast-rgb: 255,255,255;
+	--ion-color-primary-shade: #ac0b0a;
+	--ion-color-primary-tint: #c92423;
+
+	--ion-color-secondary: #C47F74;
+	--ion-color-secondary-rgb: 196,127,116;
+	--ion-color-secondary-contrast: #000000;
+	--ion-color-secondary-contrast-rgb: 0,0,0;
+	--ion-color-secondary-shade: #ac7066;
+	--ion-color-secondary-tint: #ca8c82;
+
+	--ion-color-tertiary: #B58A18;
+	--ion-color-tertiary-rgb: 181,138,24;
+	--ion-color-tertiary-contrast: #000000;
+	--ion-color-tertiary-contrast-rgb: 0,0,0;
+	--ion-color-tertiary-shade: #9f7915;
+	--ion-color-tertiary-tint: #bc962f;
+
+  --ion-color-danger: #FF5449;
+	--ion-color-danger-rgb: 255,84,73;
+	--ion-color-danger-contrast: #000000;
+	--ion-color-danger-contrast-rgb: 0,0,0;
+	--ion-color-danger-shade: #e04a40;
+	--ion-color-danger-tint: #ff655b;
+}
+
+/* ionic components */
+ion-thumbnail {
+	--size: 10%;
+}
+
+/* about img */
+.cover-about {
+	max-width: 256px;
+	margin: auto;
+}
+
+/* card */
+.card {
+	position: absolute;
+	width: 90%;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+}
+
+/* ionic buttons */
+.btn {
+	--border-color: var(--ion-color-dark);
+	--border-radius: 30px;
+}
+
+.btn-anwser {
+	padding-block: 10px;
+
+	&:last-child {
+		padding-bottom: 0;
+	}
+}
+
+.btn-next {
+	--color: var(--ion-color-success);
+	--color-hover: var(--ion-color-success);
+}
