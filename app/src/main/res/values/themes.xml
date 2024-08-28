@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.UnoNoMercy" parent="android:Theme.Material.Light.NoActionBar" >
+    </style>
+
+    <style name="Theme.SplashStart" parent="Theme.SplashScreen" >
+        <item name="windowSplashScreenBackground">@color/primary</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
+        <item name="windowSplashScreenAnimationDuration">3000</item>
+        <item name="postSplashScreenTheme">@style/Theme.UnoNoMercy</item>
+    </style>
+</resources>
