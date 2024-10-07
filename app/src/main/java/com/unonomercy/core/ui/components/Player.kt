@@ -79,9 +79,7 @@ fun Player(position: Int) {
         text = {
             TextField(
                 value = drawCards,
-                onValueChange = {
-                    if(it.isDigitsOnly()) drawCards = it
-                },
+                onValueChange = { if (it.isDigitsOnly()) drawCards = it },
                 visualTransformation = VisualTransformation.None,
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword)
             )
@@ -112,9 +110,8 @@ fun Player(position: Int) {
         title = { Text("cuantas cartas va agregar") },
         text = {
             TextField(
-                drawCards, {
-                    if(it.isDigitsOnly()) drawCards = it
-                },
+                value = drawCards,
+                onValueChange = { if (it.isDigitsOnly()) drawCards = it },
                 visualTransformation = VisualTransformation.None,
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword)
             )

@@ -37,7 +37,7 @@ fun AppScreen() {
     val navController = rememberNavController()
 
     Scaffold(
-        Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize(),
         bottomBar = { BottomBar(navController) }
     ) {innerPadding ->
         val navStyles = Modifier.padding(innerPadding)

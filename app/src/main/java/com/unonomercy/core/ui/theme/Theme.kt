@@ -1,10 +1,15 @@
 package com.unonomercy.core.ui.theme
 
+import android.app.Activity
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.LocalView
+import androidx.core.view.WindowCompat
 
 private val lightScheme = lightColorScheme(
     primary = primaryLight,
@@ -86,7 +91,24 @@ private val DarkColorScheme = darkColorScheme(
 fun UnoNoMercyTheme(
     content: @Composable () -> Unit
 ) {
-    val colorScheme = if(isSystemInDarkTheme()) DarkColorScheme else lightScheme
+    val darkTheme = isSystemInDarkTheme()
+
+    val view = LocalView.current
+    val colorScheme = if(darkTheme) DarkColorScheme else lightScheme
+    val window = (view.context as Activity).window
+
+    if(!view.isInEditMode) {
+        window.apply {
+            statusBarColor = Color.Transparent.toArgb()
+            navigationBarColor = colorScheme.background.toArgb()
+        }
+
+        WindowCompat.getInsetsController(window, view).apply {
+            isAppearanceLightStatusBars = !darkTheme
+            isAppearanceLightNavigationBars = !darkTheme
+        }
+    }
+
 
     MaterialTheme(
         colorScheme = colorScheme,

@@ -55,9 +55,8 @@ fun AboutScreen() {
     ) {
         OutlinedCard(
             modifier = cardStyle,
-            border = BorderStroke(1.dp, Color.White),
             colors = CardDefaults.outlinedCardColors(
-                contentColor = MaterialTheme.colorScheme.primary
+                contentColor = MaterialTheme.colorScheme.primaryContainer
             )
         ) {
             Column {
@@ -72,7 +71,7 @@ fun AboutScreen() {
                         style = MaterialTheme.typography.titleLarge,
                         maxLines = 2,
                         overflow = TextOverflow.Ellipsis,
-                        color = Color.White
+                        color = MaterialTheme.colorScheme.primary
                     )
 
                     Spacer(modifier = Modifier.height(5.dp))
@@ -80,7 +79,7 @@ fun AboutScreen() {
                     Text(
                         text = "desarrollado por omega5300 de stack-analyze",
                         style = MaterialTheme.typography.titleSmall,
-                        color = Color.White
+                        color = MaterialTheme.colorScheme.primary,
                     )
                 }
 
